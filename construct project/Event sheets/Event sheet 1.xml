@@ -2,5 +2,275 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
+        <variable constant="0" name="tick" sid="717632468853289" static="0" type="number">0</variable>
+        <event-group description="" sid="816798565725370" title="generate">
+            <sub-events>
+                <variable constant="0" name="x" sid="365903226918475" static="0" type="number">0</variable>
+                <variable constant="0" name="y" sid="747858400935235" static="0" type="number">0</variable>
+                <variable constant="0" name="size" sid="970516920696068" static="0" type="number">0</variable>
+                <event-block sid="945873033082799">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="151617264101612" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="949591608103614" type="Function">
+                            <param id="0" name="Name">&quot;level.generate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246950208867850">
+                    <conditions>
+                        <condition id="0" name="On function" sid="149315705394105" type="Function">
+                            <param id="0" name="Name">&quot;level.generate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="318976466640531" type="light" />
+                        <action id="-9" name="Set value" sid="840851653702096" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">level+1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="496240791169466" type="System">
+                            <param id="0" name="Variable">y</param>
+                            <param id="1" name="Value">level+1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="264019652708712" type="System">
+                            <param id="0" name="Variable">size</param>
+                            <param id="1" name="Value">OriginalWindowHeight/x</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="922158798761109">
+                            <conditions>
+                                <condition id="-10" name="For" sid="958384551825001" type="System">
+                                    <param id="0" name="Name">&quot;y&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">y-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="645109774531330">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="763422974097763" type="System">
+                                            <param id="0" name="Name">&quot;x&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">x-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="751459908655833" type="System">
+                                            <param id="0" name="Object to create">light</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">loopindex(&quot;x&quot;) * size</param>
+                                            <param id="3" name="Y">loopindex(&quot;y&quot;) * size</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="216169088755776" type="light">
+                                            <param id="0" name="Width">size</param>
+                                            <param id="1" name="Height">size</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="714460748194628" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="153673772313058" type="light">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="819531206651458" title="lights">
+            <sub-events>
+                <variable constant="0" name="baseOdds" sid="608550677876733" static="0" type="number">0.2</variable>
+                <event-block sid="884260324660013">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="433644783171565" type="System">
+                            <param id="0" name="Interval (seconds)">2.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="312312448047432" type="System">
+                            <param id="0" name="Variable">tick</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="145285831176811">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="364569128073862" type="System">
+                                    <param id="0" name="Object">light</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="679850526504835">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="640605792288492" type="System">
+                                            <param id="0" name="First value">random(0,1) * tick * baseOdds</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="300400069528569" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="782878968658674">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="986110445750562" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="131796742357169" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="454470425220948">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="167992101104330" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="318862895923817">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="477449160689321" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="414243473496131" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;No lights! Level &quot; &amp; level &amp; &quot; tick &quot; &amp; tick &amp; &quot; :(&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="261960795398024">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="213378364724515" type="System">
+                                            <param id="0" name="Count">choose(1,1,1,2,2,3)</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="236707137854701" type="System">
+                                            <param id="0" name="Object">light</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="178164085261716" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="556000315202901">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="speed" sid="322230929700172" static="0" type="number">0.04</variable>
+                        <event-block sid="397185405587947">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="657190800111771" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="700539086144380" type="light">
+                                    <param id="0" name="Opacity">lerp(light.Opacity, 100, speed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231806550340040">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="262333685310227" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="787129455485699" type="light">
+                                    <param id="0" name="Opacity">lerp(light.Opacity, 0, speed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="520300744150625" title="controls">
+            <sub-events>
+                <event-block sid="413128407601303">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="250808212097925" type="Mouse" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="740248935133497">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="949188640984812" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="576466600203007">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="928875966718796" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="359254942192632" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="224528459471869" type="System">
+                                    <param id="0" name="Variable">tick</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="439793108685989" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="554837381260762" title="cheat">
+            <sub-events>
+                <event-block sid="451211713308290">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="730126474773850" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="521841855575820">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="380089761240922" type="Keyboard">
+                                    <param id="0" name="Key">32 (Espace)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="220224086886326" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
