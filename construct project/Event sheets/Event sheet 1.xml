@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
         <variable constant="0" name="tick" sid="717632468853289" static="0" type="number">0</variable>
+        <variable comment="in seconds" constant="0" name="delay" sid="233878733708793" static="0" type="number">300</variable>
         <event-group description="" sid="816798565725370" title="generate">
             <sub-events>
                 <variable constant="0" name="x" sid="365903226918475" static="0" type="number">0</variable>
@@ -89,11 +90,25 @@
         </event-group>
         <event-group description="" sid="819531206651458" title="lights">
             <sub-events>
+                <event-block any="1" sid="555183144459691">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="811151887494387" type="System" />
+                        <condition id="-6" name="Every X seconds" sid="433644783171565" type="System">
+                            <param id="0" name="Interval (seconds)">delay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="490255022030330" type="Function">
+                            <param id="0" name="Name">&quot;enlight&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <variable constant="0" name="baseOdds" sid="608550677876733" static="0" type="number">0.2</variable>
                 <event-block sid="884260324660013">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="433644783171565" type="System">
-                            <param id="0" name="Interval (seconds)">2.5</param>
+                        <condition id="0" name="On function" sid="720884173743814" type="Function">
+                            <param id="0" name="Name">&quot;enlight&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -268,7 +283,122 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="741483800449736">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="603591060294792" type="Keyboard">
+                                    <param id="0" name="Key">49 (1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="674851817983403" type="System">
+                                    <param id="0" name="Variable">delay</param>
+                                    <param id="1" name="Value">2.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="428078296723485" type="Function">
+                                    <param id="0" name="Name">&quot;enlight&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="431044059188775" title="HUD">
+            <sub-events>
+                <event-block sid="749381432803779">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="691336823788538" type="Mouse">
+                            <param id="0" name="Object">mouseDetector</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="626987639701479" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;dessus&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496298708046513">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="496840485628753" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="493754780299119" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;pas dessus&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490218269702759">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="345636110593334" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="141197171827190" type="level">
+                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="232791364389685" type="level">
+                            <param id="0" name="Size (pt)">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="105872735038415" title="vfx">
+            <sub-events>
+                <variable comment="between 0 and 1" constant="0" name="effectsIntensity" sid="471437579977621" static="1" type="number">1</variable>
+                <variable constant="0" name="blurRatio" sid="175028931907981" static="0" type="number">300</variable>
+                <variable constant="0" name="waterEffectRatio" sid="287089113874412" static="0" type="number">4</variable>
+                <event-block sid="261119533849147">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="637803351872970" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="173810226427053" type="System">
+                            <param id="0" name="Variable">effectsIntensity</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="402733090291289">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="649355867120583" type="System">
+                            <param id="0" name="Variable">effectsIntensity</param>
+                            <param id="1" name="Value">lerp(effectsIntensity, 0, 0.05)</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="163412716723589" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Effect">&quot;Water&quot;</param>
+                            <param id="2" name="Parameter index">3</param>
+                            <param id="3" name="Value">effectsIntensity * waterEffectRatio</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="667180887373046" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">effectsIntensity * blurRatio</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>TODO : optimization</comment>
+                <event-block disabled="1" sid="661663892204108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="880801270165584" type="System">
+                            <param id="0" name="Variable">effectsIntensity</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-30" name="Set layer effect enabled" sid="892402093386984" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Water&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
