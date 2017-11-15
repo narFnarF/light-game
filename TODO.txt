@@ -4,8 +4,13 @@ TODO
 - Options: 1 min ou 5 min
 
 
-
 UI:
 - à quel niveau je suis
 - comment je joue
 - feedback si je clique au mauvais moment
+
+
+
+release:
+- page itch.io
+- description & readme sur github
