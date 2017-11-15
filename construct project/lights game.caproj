@@ -30,7 +30,7 @@
         <height>500</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>1</preview-effects>
+    <preview-effects>0</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -79,7 +79,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="level" sid="220158514473183">
+        <object-type name="tGridSize" sid="220158514473183">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tLevel" sid="759820171986187">
             <plugin id="Text" />
         </object-type>
     </object-folder>

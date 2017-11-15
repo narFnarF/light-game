@@ -16,7 +16,7 @@
         <layer name="mouse detection" sid="440536715662471">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -455,7 +455,7 @@
                             <delta>20</delta>
                             <emboss>0.5</emboss>
                             <frequency>10</frequency>
-                            <intensity>0</intensity>
+                            <intensity>1</intensity>
                             <reflectivity>0</reflectivity>
                             <speed>0.1</speed>
                             <x-speed>0.3</x-speed>
@@ -467,7 +467,7 @@
                     <effect id="radialblur" />
                     <effect-instance type="RadialBlur">
                         <parameters>
-                            <intensity>0</intensity>
+                            <intensity>4</intensity>
                             <radius>0.4</radius>
                         </parameters>
                     </effect-instance>
@@ -490,14 +490,14 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="level" uid="5">
+                <instance type="tGridSize" uid="5">
                     <properties>
                         <text>5x5</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-96,400,0</font>
+                        <font>Barlow Condensed,-200,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -505,11 +505,38 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>63</x>
-                        <y>75</y>
+                        <x>20</x>
+                        <y>44</y>
                         <z>0</z>
-                        <width>353</width>
-                        <height>262</height>
+                        <width>463</width>
+                        <height>276</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tLevel" uid="21">
+                    <properties>
+                        <text>Level 4</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Barlow Condensed,-35,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>73</x>
+                        <y>64</y>
+                        <z>0</z>
+                        <width>354</width>
+                        <height>47</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

@@ -65,7 +65,7 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="751459908655833" type="System">
                                             <param id="0" name="Object to create">light</param>
-                                            <param id="1" name="Layer">0</param>
+                                            <param id="1" name="Layer">&quot;game&quot;</param>
                                             <param id="2" name="X">loopindex(&quot;x&quot;) * size</param>
                                             <param id="3" name="Y">loopindex(&quot;y&quot;) * size</param>
                                         </action>
@@ -335,11 +335,11 @@
                         <condition id="-2" name="On start of layout" sid="345636110593334" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set web font" sid="141197171827190" type="level">
+                        <action id="5" name="Set web font" sid="141197171827190" type="tGridSize">
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
                         </action>
-                        <action id="3" name="Set font size" sid="232791364389685" type="level">
+                        <action disabled="1" id="3" name="Set font size" sid="232791364389685" type="tGridSize">
                             <param id="0" name="Size (pt)">150</param>
                         </action>
                     </actions>
