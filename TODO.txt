@@ -14,3 +14,5 @@ UI:
 release:
 - page itch.io
 - description & readme sur github
+- vaguely inspired by pretty colors and Vesper5
+
