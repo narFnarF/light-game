@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors />
     <used-effects>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
         <effect author="Viktor Korsun" id="water">Water</effect>
     </used-effects>
@@ -30,7 +31,7 @@
         <height>500</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>0</preview-effects>
+    <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -83,6 +84,9 @@
             <plugin id="Text" />
         </object-type>
         <object-type name="tLevel" sid="759820171986187">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tInstructions" sid="420157277066665">
             <plugin id="Text" />
         </object-type>
     </object-folder>

@@ -544,8 +544,49 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="tInstructions" uid="22">
+                    <properties>
+                        <text>Click when fully colored. Pattern changes every 5 minutes.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Barlow Condensed,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>40</x>
+                        <y>307</y>
+                        <z>0</z>
+                        <width>415</width>
+                        <height>172</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="Pulse">
+                    <effect id="pulse" />
+                    <effect-instance type="Pulse">
+                        <parameters>
+                            <center-x>0.5</center-x>
+                            <center-y>0.4</center-y>
+                            <frequency>100</frequency>
+                            <intensity>0.1</intensity>
+                            <lighting>0</lighting>
+                            <speed>5</speed>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
     </layers>
     <nonworld-instances />
