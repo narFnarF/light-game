@@ -360,6 +360,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="852783046227213">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="961472801259596" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="516983704478331" type="System">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="105872735038415" title="vfx">
