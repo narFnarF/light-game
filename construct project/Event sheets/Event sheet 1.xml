@@ -325,32 +325,9 @@
                         <condition id="-2" name="On start of layout" sid="345636110593334" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="5" name="Set web font" sid="141197171827190" type="tGridSize">
-                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
-                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
-                        </action>
-                        <action disabled="1" id="5" name="Set web font" sid="283935706311769" type="tInstructions">
-                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
-                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
-                        </action>
-                        <action disabled="1" id="5" name="Set web font" sid="817606210769234" type="tLevel">
-                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
-                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
-                        </action>
-                        <action disabled="1" id="5" name="Set web font" sid="238226689119098" type="tWarning">
-                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
-                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
-                        </action>
                         <action id="5" name="Set web font" sid="784911305408718" type="f_BarlowFont">
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
-                        </action>
-                        <action disabled="1" id="3" name="Set font size" sid="232791364389685" type="tGridSize">
-                            <param id="0" name="Size (pt)">150</param>
-                        </action>
-                        <action disabled="1" id="-4" name="Set layer visible" sid="793715455205299" type="System">
-                            <param id="0" name="Layer">&quot;error&quot;</param>
-                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -361,10 +338,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="626987639701479" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;dessus&quot;</param>
-                        </action>
                         <action id="-18" name="Set layer opacity" sid="229273145716885" type="System">
                             <param id="0" name="Layer">&quot;UI&quot;</param>
                             <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 100, 0.1)</param>
@@ -376,10 +349,6 @@
                         <condition id="-22" name="Else" sid="496840485628753" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="493754780299119" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;pas dessus&quot;</param>
-                        </action>
                         <action id="-18" name="Set layer opacity" sid="577106132130618" type="System">
                             <param id="0" name="Layer">&quot;UI&quot;</param>
                             <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 0, 0.2)</param>
@@ -393,10 +362,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-18" name="Set layer opacity" sid="516983704478331" type="System">
-                            <param id="0" name="Layer">&quot;UI&quot;</param>
-                            <param id="1" name="Opacity">0</param>
-                        </action>
                         <action id="-9" name="Set value" sid="254051375549893" type="System">
                             <param id="0" name="Variable">dimmed</param>
                             <param id="1" name="Value">4</param>
@@ -421,6 +386,14 @@
                             <param id="1" name="Value">dt</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="268232180415839">
+                    <conditions>
+                        <condition id="0" name="On function" sid="387125345580631" type="Function">
+                            <param id="0" name="Name">&quot;tLevel.update&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -490,7 +463,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>TODO : optimization</comment>
+                <comment>TODO : GPU optimization</comment>
                 <event-block disabled="1" sid="661663892204108">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="880801270165584" type="System">
