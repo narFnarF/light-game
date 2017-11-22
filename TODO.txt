@@ -1,6 +1,7 @@
 TODO
 - save system
 - Options: 1 min ou 5 min
+- icône
 
 
 UI:
