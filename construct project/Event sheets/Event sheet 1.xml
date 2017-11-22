@@ -311,15 +311,23 @@
                         <condition id="-2" name="On start of layout" sid="345636110593334" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set web font" sid="141197171827190" type="tGridSize">
+                        <action disabled="1" id="5" name="Set web font" sid="141197171827190" type="tGridSize">
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
                         </action>
-                        <action id="5" name="Set web font" sid="283935706311769" type="tInstructions">
+                        <action disabled="1" id="5" name="Set web font" sid="283935706311769" type="tInstructions">
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
                         </action>
-                        <action id="5" name="Set web font" sid="817606210769234" type="tLevel">
+                        <action disabled="1" id="5" name="Set web font" sid="817606210769234" type="tLevel">
+                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
+                        </action>
+                        <action disabled="1" id="5" name="Set web font" sid="238226689119098" type="tWarning">
+                            <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="784911305408718" type="f_BarlowFont">
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
                         </action>
