@@ -17,7 +17,9 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+    </used-behaviors>
     <used-effects>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
@@ -91,6 +93,11 @@
         </object-type>
         <object-type name="tWarning" sid="758134881993616">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="178135256369798">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families>
