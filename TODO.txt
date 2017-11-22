@@ -6,7 +6,7 @@ TODO
 
 UI:
 - à quel niveau je suis
-- comment je joue
+- comment jouer
 - feedback si je clique au mauvais moment
 
 
@@ -14,5 +14,5 @@ UI:
 release:
 - page itch.io
 - description & readme sur github
-- vaguely inspired by pretty colors and Vesper5
+- vaguely inspired by Vesper5 and pretty colors in general
 
