@@ -1,13 +1,10 @@
 TODO
-- HUD: correctly display the level nb and grid size (instead of placeholder)
 - save system
 - Options: 1 min ou 5 min
 
 
 UI:
-- à quel niveau je suis
-- comment jouer
-- feedback si je clique au mauvais moment
+- disable UI au level 1?
 
 
 
