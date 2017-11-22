@@ -329,6 +329,10 @@
                             <param id="0" name="Family name">&quot;Barlow Condensed&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Barlow+Condensed&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="470873746900164" type="Function">
+                            <param id="0" name="Name">&quot;tLevel.update&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="749381432803779">
@@ -393,7 +397,27 @@
                             <param id="0" name="Name">&quot;tLevel.update&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Set text" sid="810859864111420" type="tLevel">
+                            <param id="0" name="Text">&quot;Level &quot; &amp; level</param>
+                        </action>
+                        <action id="0" name="Set text" sid="466169538987653" type="tGridSize">
+                            <param id="0" name="Text">level+1 &amp; &quot; x &quot; &amp; level+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126214610518752">
+                    <conditions>
+                        <condition id="0" name="On function" sid="622011357354433" type="Function">
+                            <param id="0" name="Name">&quot;message: good click&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="263638551375466" type="Function">
+                            <param id="0" name="Name">&quot;tLevel.update&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
