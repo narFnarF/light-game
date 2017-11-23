@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -99,6 +100,9 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="LocalStorage" sid="398865241249025">
+            <plugin id="LocalStorage" />
+        </object-type>
     </object-folder>
     <families>
         <family name="f_BarlowFont" plugin-id="Text" sid="688567955848068">
@@ -121,6 +125,7 @@
         <global-instance type="Keyboard" uid="2" />
         <global-instance type="Mouse" uid="3" />
         <global-instance type="Function" uid="4" />
+        <global-instance type="LocalStorage" uid="24" />
     </global-instances>
     <sounds-folder />
     <music-folder />

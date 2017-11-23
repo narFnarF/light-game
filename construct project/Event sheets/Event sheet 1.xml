@@ -260,6 +260,10 @@
                                     <param id="0" name="Name">&quot;message: good click&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="0" name="Call function" sid="711267098586359" type="Function">
+                                    <param id="0" name="Name">&quot;save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-10" name="Add to" sid="359254942192632" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Value">1</param>
@@ -501,6 +505,27 @@
                             <param id="0" name="Layer">&quot;game&quot;</param>
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="594031273802692" title="save">
+            <sub-events>
+                <event-block sid="103894566248622">
+                    <conditions>
+                        <condition id="0" name="On function" sid="768328361383280" type="Function">
+                            <param id="0" name="Name">&quot;save&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="700825991456490" type="LocalStorage">
+                            <param id="0" name="Key">&quot;level&quot;</param>
+                            <param id="1" name="Value">level</param>
+                        </action>
+                        <action id="0" name="Set item" sid="886983422385004" type="LocalStorage">
+                            <param id="0" name="Key">&quot;tick&quot;</param>
+                            <param id="1" name="Value">tick</param>
                         </action>
                     </actions>
                 </event-block>
