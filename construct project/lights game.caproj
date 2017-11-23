@@ -52,6 +52,42 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="plugins">
+            <object-type name="Browser" sid="463990581900492">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="585526323770883">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="130072719057350">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="LocalStorage" sid="398865241249025">
+                <plugin id="LocalStorage" />
+            </object-type>
+            <object-type name="Mouse" sid="868585411204233">
+                <plugin id="Mouse" />
+            </object-type>
+        </object-folder>
+        <object-folder name="HUD">
+            <object-type name="tLevel" sid="759820171986187">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="tWarning" sid="758134881993616">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="178135256369798">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="tInstructions" sid="420157277066665">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="tGridSize" sid="220158514473183">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="light" sid="947611666461854">
             <plugin id="Sprite" />
             <instance-variables>
@@ -63,18 +99,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Browser" sid="463990581900492">
-            <plugin id="Browser" />
-        </object-type>
-        <object-type name="Keyboard" sid="130072719057350">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Mouse" sid="868585411204233">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Function" sid="585526323770883">
-            <plugin id="Function" />
-        </object-type>
         <object-type name="mouseDetector" sid="767424721209121">
             <plugin id="Sprite" />
             <animation-folder>
@@ -82,26 +106,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="tGridSize" sid="220158514473183">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="tLevel" sid="759820171986187">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="tInstructions" sid="420157277066665">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="tWarning" sid="758134881993616">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Fade" sid="178135256369798">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="LocalStorage" sid="398865241249025">
-            <plugin id="LocalStorage" />
         </object-type>
     </object-folder>
     <families>
@@ -115,10 +119,12 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>game.xml</layout>
+        <layout>intro.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>eGame.xml</event-sheet>
+        <event-sheet>eIntro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Browser" uid="1" />
