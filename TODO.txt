@@ -3,6 +3,8 @@ TODO
 - Options: 1 min ou 5 min
 - Effet quand l'écran est full
 - Changement de couleurs par level
+- icône
+
 
 UI:
 - disable UI au level 1?
