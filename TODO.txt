@@ -27,3 +27,10 @@ Benefits:
 - Difficulty is flat
 - No more guaranteed 100% odds over long time
 - You have to watch it. You can't just wait.
+
+
+Idée d'animation de victoire:
+- Faire tourner les carrés pendant quelques secondes
+- Mettre des effets de blur et tout ça comme quand je misclick
+- etc...
+
