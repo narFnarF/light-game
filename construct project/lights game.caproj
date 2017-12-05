@@ -35,6 +35,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>SaveCheck</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -120,11 +121,11 @@
     </families>
     <layout-folder>
         <layout>game.xml</layout>
-        <layout>intro.xml</layout>
+        <layout>SaveCheck.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eGame.xml</event-sheet>
-        <event-sheet>eIntro.xml</event-sheet>
+        <event-sheet>eSaveCheck.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Browser" uid="1" />

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>intro</name>
+    <name>SaveCheck</name>
     <sid>894611443876630</sid>
-    <event-sheet>eIntro</event-sheet>
+    <event-sheet>eSaveCheck</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
