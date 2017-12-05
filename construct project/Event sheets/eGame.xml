@@ -66,8 +66,8 @@
                                         <action id="-3" name="Create object" sid="751459908655833" type="System">
                                             <param id="0" name="Object to create">light</param>
                                             <param id="1" name="Layer">&quot;game&quot;</param>
-                                            <param id="2" name="X">loopindex(&quot;x&quot;) * size</param>
-                                            <param id="3" name="Y">loopindex(&quot;y&quot;) * size</param>
+                                            <param id="2" name="X">loopindex(&quot;x&quot;) * size + (size/2)</param>
+                                            <param id="3" name="Y">loopindex(&quot;y&quot;) * size + (size/2)</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="216169088755776" type="light">
                                             <param id="0" name="Width">size</param>
@@ -105,7 +105,7 @@
                     </actions>
                 </event-block>
                 <variable constant="0" name="baseOdds" sid="608550677876733" static="0" type="number">0.2</variable>
-                <event-block sid="884260324660013">
+                <event-block disabled="1" sid="884260324660013">
                     <conditions>
                         <condition id="0" name="On function" sid="720884173743814" type="Function">
                             <param id="0" name="Name">&quot;enlight&quot;</param>
@@ -118,7 +118,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="145285831176811">
+                        <event-block disabled="1" sid="145285831176811">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="364569128073862" type="System">
                                     <param id="0" name="Object">light</param>
@@ -126,7 +126,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="679850526504835">
+                                <event-block disabled="1" sid="679850526504835">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="640605792288492" type="System">
                                             <param id="0" name="First value">random(0,1) * tick * baseOdds</param>
@@ -141,7 +141,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="782878968658674">
+                                <event-block disabled="1" sid="782878968658674">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="986110445750562" type="System" />
                                     </conditions>
@@ -154,7 +154,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="454470425220948">
+                        <event-block disabled="1" sid="454470425220948">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="167992101104330" type="light">
                                     <param id="0" name="Instance variable">on</param>
@@ -162,7 +162,7 @@
                             </conditions>
                             <actions />
                         </event-block>
-                        <event-block sid="318862895923817">
+                        <event-block disabled="1" sid="318862895923817">
                             <conditions>
                                 <condition id="-22" name="Else" sid="477449160689321" type="System" />
                             </conditions>
@@ -173,7 +173,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="261960795398024">
+                                <event-block disabled="1" sid="261960795398024">
                                     <conditions>
                                         <condition id="-12" name="Repeat" sid="213378364724515" type="System">
                                             <param id="0" name="Count">choose(1,1,1,2,2,3)</param>
@@ -190,6 +190,27 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="169326333768904">
+                    <conditions>
+                        <condition id="0" name="On function" sid="741269014733341" type="Function">
+                            <param id="0" name="Name">&quot;enlight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="roll" sid="567918534823691" static="0" type="number">0</variable>
+                        <variable constant="0" name="rollMax" sid="469729841890665" static="0" type="number">2</variable>
+                        <event-block sid="145475981854245">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="125385485535513" type="System">
+                                    <param id="0" name="Variable">roll</param>
+                                    <param id="1" name="Value">ceil(random(0.000001, rollMax))</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -526,6 +547,18 @@
                         <action id="0" name="Set item" sid="886983422385004" type="LocalStorage">
                             <param id="0" name="Key">&quot;tick&quot;</param>
                             <param id="1" name="Value">tick</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="336559256240158" title="win anim">
+            <sub-events>
+                <event-block disabled="1" sid="405043739508667">
+                    <conditions />
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="722728341108332" type="light">
+                            <param id="0" name="Speed">100</param>
                         </action>
                     </actions>
                 </event-block>

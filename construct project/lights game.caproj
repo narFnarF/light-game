@@ -20,6 +20,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
@@ -94,9 +95,14 @@
             <instance-variables>
                 <instance-variable name="on" sid="266753302818456" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Rotate" sid="647058222299410">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677372214340652" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

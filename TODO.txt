@@ -1,13 +1,10 @@
 TODO
-- save system
-- Options: 1 min ou 5 min
+- UI: cacher txtbox level & size au level 1
 - Effet quand l'écran est full
 - Changement de couleurs par level
 - icône
-
-
-UI:
-- disable UI au level 1?
+- Options: 1 min ou 5 min
+- save system: save the squares?
 
 
 
