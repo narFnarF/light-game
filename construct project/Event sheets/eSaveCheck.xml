@@ -16,11 +16,18 @@
                     <param id="0" name="Variable">tick</param>
                     <param id="1" name="Value">-1</param>
                 </action>
+                <action id="-16" name="Wait" sid="133330023664472" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
                 <action id="1" name="Get item" sid="246167249708517" type="LocalStorage">
                     <param id="0" name="Key">&quot;level&quot;</param>
                 </action>
                 <action id="1" name="Get item" sid="788347366942898" type="LocalStorage">
                     <param id="0" name="Key">&quot;tick&quot;</param>
+                </action>
+                <action id="14" name="Log" sid="437413917253510" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage: Getting data&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -29,12 +36,12 @@
                 <condition id="16" name="On all gets complete" sid="163477488943469" type="LocalStorage" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="904161405250529" type="System">
-                    <param id="0" name="Layout">game</param>
-                </action>
                 <action id="14" name="Log" sid="349972298986395" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Local storage: all gets complete&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="904161405250529" type="System">
+                    <param id="0" name="Layout">game</param>
                 </action>
             </actions>
         </event-block>
@@ -46,6 +53,40 @@
                 <action id="14" name="Log" sid="681210534231121" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Local storage: error&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="720340554728510">
+            <conditions>
+                <condition id="1" name="On item get" sid="250944092933061" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="725998140946888" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="14" name="Log" sid="575787685744253" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage: &quot; &amp; LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="725898304887784">
+            <conditions>
+                <condition id="1" name="On item get" sid="823830435303722" type="LocalStorage">
+                    <param id="0" name="Key">&quot;tick&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="651829482319665" type="System">
+                    <param id="0" name="Variable">tick</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="14" name="Log" sid="567019693613631" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage: &quot; &amp; LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
