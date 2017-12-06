@@ -1,5 +1,6 @@
 TODO
-- save system allows cheating
+- prevent possible cheating: relaunching the game to enlight faster than 5 minutes
+---- save the nb of lights, and relight them on launch
 - UI: cacher txtbox level & size au level 1
 - Effet quand l'écran est full
 - Changement de couleurs par level
@@ -14,16 +15,6 @@ release:
 - vaguely inspired by Vesper5 and pretty colors in general
 
 
-Idea for random lights:
-Decouple the odds with the number of lights. The odds are flat, for all level. (maybe they lower slowly a bit per level)
-Instead of 50% chance for each light to be On, the game rolls a dice of 20 faces. The number of square lit is a ratio of that.
-Roll 1: 1/20 of all lights are on
-Roll 5: 5/20 of all lights are on
-Roll 20: all of all lights are on
-Benefits:
-- Difficulty is flat
-- No more guaranteed 100% odds over long time
-- You have to watch it. You can't just wait.
 
 
 Idée d'animation de victoire:
