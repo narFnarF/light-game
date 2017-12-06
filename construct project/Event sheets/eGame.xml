@@ -630,6 +630,25 @@
                             <param id="1" name="Value">tick</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="711785344238899">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="157280583459374" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set item" sid="878588889209509" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;lights&quot;</param>
+                                    <param id="1" name="Value">light.PickedCount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="548669791918821">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
