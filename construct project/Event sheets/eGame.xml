@@ -244,32 +244,54 @@
                                     <param id="0" name="Instance variable">on</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="841831748820212" type="Function">
+                                    <param id="0" name="Name">&quot;light n&quot;</param>
+                                    <param id="1" name="Parameter {n}">lights</param>
+                                </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="637166951081895">
-                                    <conditions>
-                                        <condition id="-12" name="Repeat" sid="617572221817998" type="System">
-                                            <param id="0" name="Count">lights</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="499796550551039" type="light">
-                                            <param id="0" name="Instance variable">on</param>
-                                        </condition>
-                                        <condition id="-16" name="Pick random instance" sid="714868359927207" type="System">
-                                            <param id="0" name="Object">light</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="440368668038916" type="light">
-                                            <param id="0" name="Instance variable">on</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action disabled="1" id="14" name="Log" sid="921031892670631" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;1 light (&quot; &amp; light.UID &amp; &quot;)&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="481327515003918">
+                    <conditions>
+                        <condition id="0" name="On function" sid="248267759410255" type="Function">
+                            <param id="0" name="Name">&quot;light n&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="n" sid="700636243393481" static="0" type="number">0</variable>
+                        <event-block sid="494315483192934">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="822244845848261" type="System">
+                                    <param id="0" name="Variable">n</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="956088296242526">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="922982753352162" type="System">
+                                    <param id="0" name="Count">n</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="176537849534695" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="406353246125332" type="System">
+                                    <param id="0" name="Object">light</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="541180163616238" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="486926440244540" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;1 light (&quot; &amp; light.UID &amp; &quot;)&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
