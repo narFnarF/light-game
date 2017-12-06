@@ -1,10 +1,10 @@
 TODO
+- save system allows cheating
 - UI: cacher txtbox level & size au level 1
 - Effet quand l'écran est full
 - Changement de couleurs par level
 - icône
 - Options: 1 min ou 5 min
-- save system: save the squares?
 
 
 
