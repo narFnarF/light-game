@@ -8,6 +8,10 @@ TODO
 - Options: 1 min ou 5 min
 
 
+Bugs:
+- Function "light n" tries to access out of bound parameter
+
+
 
 release:
 - page itch.io

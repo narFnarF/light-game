@@ -6,7 +6,7 @@
         <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
         <variable constant="0" name="tick" sid="717632468853289" static="0" type="number">0</variable>
         <variable comment="in seconds" constant="0" name="delay" sid="233878733708793" static="0" type="number">300</variable>
-        <event-group description="" sid="816798565725370" title="generate">
+        <event-group description="" sid="816798565725370" title="generate grid">
             <sub-events>
                 <variable constant="0" name="x" sid="365903226918475" static="0" type="number">0</variable>
                 <variable constant="0" name="y" sid="747858400935235" static="0" type="number">0</variable>
@@ -90,9 +90,24 @@
         </event-group>
         <event-group description="" sid="819531206651458" title="lights">
             <sub-events>
-                <event-block any="1" sid="555183144459691">
+                <event-block sid="555183144459691">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="811151887494387" type="System" />
+                        <condition id="-14" inverted="1" name="Compare variable" sid="236235805076875" type="System">
+                            <param id="0" name="Variable">nbLights</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="634924677081326" type="Function">
+                            <param id="0" name="Name">&quot;light n&quot;</param>
+                            <param id="1" name="Parameter {n}">nbLights</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="283829201841415">
+                    <conditions>
                         <condition id="-6" name="Every X seconds" sid="433644783171565" type="System">
                             <param id="0" name="Interval (seconds)">delay</param>
                         </condition>
@@ -243,6 +258,10 @@
                                 <action id="-13" name="Set boolean" sid="631649183414760" type="light">
                                     <param id="0" name="Instance variable">on</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="569670656564407" type="System">
+                                    <param id="0" name="Variable">nbLights</param>
+                                    <param id="1" name="Value">lights</param>
                                 </action>
                                 <action id="0" name="Call function" sid="841831748820212" type="Function">
                                     <param id="0" name="Name">&quot;light n&quot;</param>
@@ -415,6 +434,10 @@
                                 </action>
                                 <action id="0" name="Call function" sid="428078296723485" type="Function">
                                     <param id="0" name="Name">&quot;enlight&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="396223880999676" type="Function">
+                                    <param id="0" name="Name">&quot;save&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -621,6 +644,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="14" name="Log" sid="863372491887622" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;saving...&quot;</param>
+                        </action>
                         <action id="0" name="Set item" sid="700825991456490" type="LocalStorage">
                             <param id="0" name="Key">&quot;level&quot;</param>
                             <param id="1" name="Value">level</param>
@@ -641,6 +668,17 @@
                                 <action id="0" name="Set item" sid="878588889209509" type="LocalStorage">
                                     <param id="0" name="Key">&quot;lights&quot;</param>
                                     <param id="1" name="Value">light.PickedCount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="814303830889692">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="713831390193545" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set item" sid="813664811156507" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;lights&quot;</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>

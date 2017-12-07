@@ -22,8 +22,11 @@
                 <action id="1" name="Get item" sid="246167249708517" type="LocalStorage">
                     <param id="0" name="Key">&quot;level&quot;</param>
                 </action>
-                <action id="1" name="Get item" sid="788347366942898" type="LocalStorage">
+                <action disabled="1" id="1" name="Get item" sid="788347366942898" type="LocalStorage">
                     <param id="0" name="Key">&quot;tick&quot;</param>
+                </action>
+                <action id="1" name="Get item" sid="326340505344541" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lights&quot;</param>
                 </action>
                 <action id="14" name="Log" sid="437413917253510" type="Browser">
                     <param id="0" name="Type">0</param>
@@ -62,18 +65,44 @@
                     <param id="0" name="Key">&quot;level&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="725998140946888" type="System">
-                    <param id="0" name="Variable">level</param>
-                    <param id="1" name="Value">LocalStorage.ItemValue</param>
-                </action>
-                <action id="14" name="Log" sid="575787685744253" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Local storage: &quot; &amp; LocalStorage.ItemValue</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="972210855251209">
+                    <conditions>
+                        <condition id="12" name="Compare value" sid="417439525972178" type="LocalStorage">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">&quot;NaN&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="841647086071427" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="14" name="Log" sid="842692992814640" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Local storage: level was NaN. Set to 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630773754939014">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="191454254186857" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="725998140946888" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="14" name="Log" sid="575787685744253" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Local storage: level &quot; &amp; LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="725898304887784">
+        <event-block disabled="1" sid="725898304887784">
             <conditions>
                 <condition id="1" name="On item get" sid="823830435303722" type="LocalStorage">
                     <param id="0" name="Key">&quot;tick&quot;</param>
@@ -86,7 +115,25 @@
                 </action>
                 <action id="14" name="Log" sid="567019693613631" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Local storage: &quot; &amp; LocalStorage.ItemValue</param>
+                    <param id="1" name="Message">&quot;Local storage: tick &quot; &amp; LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="nbLights" sid="551270629813574" static="0" type="number">0</variable>
+        <event-block sid="301947924091145">
+            <conditions>
+                <condition id="1" name="On item get" sid="485452756720464" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lights&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="643959346279036" type="System">
+                    <param id="0" name="Variable">nbLights</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="14" name="Log" sid="807490713199124" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage: lights &quot; &amp; LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
