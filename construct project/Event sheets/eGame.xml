@@ -182,9 +182,14 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <comment>TODO detect win condition</comment>
                                 <event-block sid="990786432661881">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="460522692442663" type="System">
+                                            <param id="0" name="Variable">roll</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">rollMax</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="543954058902638" type="System">
                                             <param id="0" name="Variable">winState</param>
@@ -254,55 +259,12 @@
                     <conditions />
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="speed" sid="322230929700172" static="0" type="number">0.04</variable>
-                        <event-block sid="397185405587947">
+                        <event-block sid="637800833803050">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="657190800111771" type="light">
-                                    <param id="0" name="Instance variable">on</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="700539086144380" type="light">
-                                    <param id="0" name="Opacity">lerp(light.Opacity, 100, speed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="231806550340040">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="262333685310227" type="light">
-                                    <param id="0" name="Instance variable">on</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="787129455485699" type="light">
-                                    <param id="0" name="Opacity">lerp(light.Opacity, 0, speed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-group description="" sid="336559256240158" title="win anim">
-                    <sub-events>
-                        <event-block sid="405043739508667">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="885835459669947" type="light">
-                                    <param id="0" name="Instance variable">on</param>
-                                </condition>
-                                <condition id="-6" name="Every X seconds" sid="986604299087491" type="System">
-                                    <param id="0" name="Interval (seconds)">0.1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="999335033762539" type="light">
-                                    <param id="0" name="Instance variable">dimmer</param>
-                                    <param id="1" name="Value">random(50, 100)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="490709924635401">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="239013829103081" type="light">
-                                    <param id="0" name="Instance variable">on</param>
+                                <condition id="-14" name="Compare variable" sid="761681920954309" type="System">
+                                    <param id="0" name="Variable">winState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -310,9 +272,57 @@
                                     <param id="0" name="Opacity">lerp(light.Opacity, light.dimmer, 0.03)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="843520438004721">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="986604299087491" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="999335033762539" type="light">
+                                            <param id="0" name="Instance variable">dimmer</param>
+                                            <param id="1" name="Value">random(30, 100)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="461752074170870">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="882292489772537" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="speed" sid="322230929700172" static="0" type="number">0.04</variable>
+                                <event-block sid="397185405587947">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="657190800111771" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="700539086144380" type="light">
+                                            <param id="0" name="Opacity">lerp(light.Opacity, 100, speed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="231806550340040">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="262333685310227" type="light">
+                                            <param id="0" name="Instance variable">on</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="787129455485699" type="light">
+                                            <param id="0" name="Opacity">lerp(light.Opacity, 0, speed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-group>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="520300744150625" title="controls">
@@ -325,8 +335,13 @@
                     <sub-events>
                         <event-block sid="740248935133497">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="949188640984812" type="light">
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="949188640984812" type="light">
                                     <param id="0" name="Instance variable">on</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="615251862717533" type="System">
+                                    <param id="0" name="Variable">winState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -352,6 +367,10 @@
                                 <action id="-10" name="Add to" sid="359254942192632" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="797413181303799" type="System">
+                                    <param id="0" name="Variable">winState</param>
+                                    <param id="1" name="Value">&quot;false&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="711267098586359" type="Function">
                                     <param id="0" name="Name">&quot;save&quot;</param>
@@ -379,9 +398,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="220224086886326" type="light">
+                                <action disabled="1" id="-13" name="Set boolean" sid="220224086886326" type="light">
                                     <param id="0" name="Instance variable">on</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="433836196348385" type="System">
+                                    <param id="0" name="Variable">winState</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -503,14 +526,39 @@
                             <param id="0" name="Name">&quot;tLevel.update&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="810859864111420" type="tLevel">
-                            <param id="0" name="Text">&quot;Level &quot; &amp; level</param>
-                        </action>
-                        <action id="0" name="Set text" sid="466169538987653" type="tGridSize">
-                            <param id="0" name="Text">level+1 &amp; &quot; x &quot; &amp; level+1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="170707096277316">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="903984234520102" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="881700012488530" type="tLevel">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="695533126163929" type="tGridSize">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="418545768119391">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="543060310305459" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="810859864111420" type="tLevel">
+                                    <param id="0" name="Text">&quot;Level &quot; &amp; level</param>
+                                </action>
+                                <action id="0" name="Set text" sid="466169538987653" type="tGridSize">
+                                    <param id="0" name="Text">level+1 &amp; &quot; x &quot; &amp; level+1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="126214610518752">
                     <conditions>
@@ -527,7 +575,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="550625452129389" title="error">
+        <event-group description="" sid="550625452129389" title="error message">
             <sub-events>
                 <event-block sid="291659880528536">
                     <conditions>
