@@ -21,7 +21,6 @@ release:
 
 
 Idée d'animation de victoire:
-- Faire tourner les carrés pendant quelques secondes
 - Mettre des effets de blur et tout ça comme quand je misclick
 - etc...
 
