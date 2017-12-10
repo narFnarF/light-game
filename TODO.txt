@@ -8,6 +8,7 @@ TODO
 
 
 Bugs:
+- after cheat win, the next nb is always the same as before cheat
 - Mouse over, then leave quickly: text remain visible. Fix: check mouse position every 5 sec, hide text if mouse didn't move.
 
 
