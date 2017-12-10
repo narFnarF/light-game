@@ -4,6 +4,7 @@
     <name>eGame</name>
     <events>
         <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
+        <variable constant="0" name="nbLights" sid="551270629813574" static="0" type="number">0</variable>
         <variable constant="0" name="tick" sid="717632468853289" static="0" type="number">0</variable>
         <variable comment="in seconds" constant="0" name="delay" sid="233878733708793" static="0" type="number">300</variable>
         <event-group description="" sid="816798565725370" title="generate grid">
@@ -93,9 +94,9 @@
                 <event-block sid="555183144459691">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="811151887494387" type="System" />
-                        <condition id="-14" inverted="1" name="Compare variable" sid="236235805076875" type="System">
+                        <condition id="-14" name="Compare variable" sid="236235805076875" type="System">
                             <param id="0" name="Variable">nbLights</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
@@ -385,7 +386,7 @@
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="224528459471869" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="224528459471869" type="System">
                                     <param id="0" name="Variable">tick</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -438,6 +439,19 @@
                                 </action>
                                 <action id="0" name="Call function" sid="396223880999676" type="Function">
                                     <param id="0" name="Name">&quot;save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="616176838207756">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="811281542115936" type="Keyboard">
+                                    <param id="0" name="Key">53 (5)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="154403793195589" type="Function">
+                                    <param id="0" name="Name">&quot;delete save&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -648,11 +662,15 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;saving...&quot;</param>
                         </action>
+                        <action id="0" name="Set item" sid="385057262824328" type="LocalStorage">
+                            <param id="0" name="Key">&quot;has savefile&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
                         <action id="0" name="Set item" sid="700825991456490" type="LocalStorage">
                             <param id="0" name="Key">&quot;level&quot;</param>
                             <param id="1" name="Value">level</param>
                         </action>
-                        <action id="0" name="Set item" sid="886983422385004" type="LocalStorage">
+                        <action disabled="1" id="0" name="Set item" sid="886983422385004" type="LocalStorage">
                             <param id="0" name="Key">&quot;tick&quot;</param>
                             <param id="1" name="Value">tick</param>
                         </action>
@@ -685,8 +703,33 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="548669791918821">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="0" name="On function" sid="729442460188185" type="Function">
+                            <param id="0" name="Name">&quot;delete save&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="966879008441294" type="System" />
+                        <action id="3" name="Clear storage" sid="742441192120532" type="LocalStorage" />
+                        <action id="14" name="Log" sid="750409915796587" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;deleting savefile&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="160439865690925">
+                    <conditions>
+                        <condition id="3" name="On storage cleared" sid="205843891325272" type="LocalStorage" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="493191952243246" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;savefile deleted&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="373656016979637" type="System">
+                            <param id="0" name="Layout">SaveCheck</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
