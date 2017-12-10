@@ -1,15 +1,14 @@
 TODO
-- prevent possible cheating: relaunching the game to enlight faster than 5 minutes
----- save the nb of lights, and relight them on launch
-- UI: cacher txtbox level & size au level 1
-- Effet quand l'écran est full
+- Correctly detect win state + global variable
+- UI: hide txtbox level & size at level 1
+- VFX quand l'écran est full
 - Changement de couleurs par level
 - icône
-- Options: 1 min ou 5 min
+- Options: 1 min ou 5 min?
 
 
 Bugs:
-- Function "light n" tries to access out of bound parameter
+- Mouse over, then leave quickly: text remain visible. Fix: check mouse position every 5 sec, hide text if mouse didn't move.
 
 
 
