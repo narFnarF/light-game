@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
         <variable constant="0" name="nbLights" sid="551270629813574" static="0" type="number">0</variable>
+        <variable constant="0" name="winState" sid="983866056576056" static="0" type="text">false</variable>
         <variable comment="in seconds" constant="0" name="delay" sid="233878733708793" static="0" type="number">300</variable>
         <event-group description="" sid="816798565725370" title="generate grid">
             <sub-events>
@@ -180,6 +181,29 @@
                                     <param id="1" name="Parameter {n}">lights</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <comment>TODO detect win condition</comment>
+                                <event-block sid="990786432661881">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="543954058902638" type="System">
+                                            <param id="0" name="Variable">winState</param>
+                                            <param id="1" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="486535936745392">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="973675659957067" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="284555170580567" type="System">
+                                            <param id="0" name="Variable">winState</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
