@@ -5,7 +5,6 @@
     <events>
         <variable constant="0" name="level" sid="478856130997259" static="0" type="number">1</variable>
         <variable constant="0" name="nbLights" sid="551270629813574" static="0" type="number">0</variable>
-        <variable constant="0" name="tick" sid="717632468853289" static="0" type="number">0</variable>
         <variable comment="in seconds" constant="0" name="delay" sid="233878733708793" static="0" type="number">300</variable>
         <event-group description="" sid="816798565725370" title="generate grid">
             <sub-events>
@@ -121,94 +120,6 @@
                     </actions>
                 </event-block>
                 <variable constant="0" name="baseOdds" sid="608550677876733" static="0" type="number">0.2</variable>
-                <event-block disabled="1" sid="884260324660013">
-                    <conditions>
-                        <condition id="0" name="On function" sid="720884173743814" type="Function">
-                            <param id="0" name="Name">&quot;enlight&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="312312448047432" type="System">
-                            <param id="0" name="Variable">tick</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="145285831176811">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="364569128073862" type="System">
-                                    <param id="0" name="Object">light</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="679850526504835">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="640605792288492" type="System">
-                                            <param id="0" name="First value">random(0,1) * tick * baseOdds</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">0.5</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="300400069528569" type="light">
-                                            <param id="0" name="Instance variable">on</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="782878968658674">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="986110445750562" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="131796742357169" type="light">
-                                            <param id="0" name="Instance variable">on</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block disabled="1" sid="454470425220948">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="167992101104330" type="light">
-                                    <param id="0" name="Instance variable">on</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block disabled="1" sid="318862895923817">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="477449160689321" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="414243473496131" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;No lights! Level &quot; &amp; level &amp; &quot; tick &quot; &amp; tick &amp; &quot; :(&quot;</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="261960795398024">
-                                    <conditions>
-                                        <condition id="-12" name="Repeat" sid="213378364724515" type="System">
-                                            <param id="0" name="Count">choose(1,1,1,2,2,3)</param>
-                                        </condition>
-                                        <condition id="-16" name="Pick random instance" sid="236707137854701" type="System">
-                                            <param id="0" name="Object">light</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="178164085261716" type="light">
-                                            <param id="0" name="Instance variable">on</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="169326333768904">
                     <conditions>
                         <condition id="0" name="On function" sid="741269014733341" type="Function">
@@ -346,6 +257,38 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="336559256240158" title="win anim">
+                    <sub-events>
+                        <event-block sid="405043739508667">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="885835459669947" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="986604299087491" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="999335033762539" type="light">
+                                    <param id="0" name="Instance variable">dimmer</param>
+                                    <param id="1" name="Value">random(60, 100)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="490709924635401">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="239013829103081" type="light">
+                                    <param id="0" name="Instance variable">on</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="439776325522175" type="light">
+                                    <param id="0" name="Opacity">lerp(light.Opacity, light.dimmer, 0.05)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="520300744150625" title="controls">
@@ -385,10 +328,6 @@
                                 <action id="-10" name="Add to" sid="359254942192632" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="224528459471869" type="System">
-                                    <param id="0" name="Variable">tick</param>
-                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="711267098586359" type="Function">
                                     <param id="0" name="Name">&quot;save&quot;</param>
@@ -670,10 +609,6 @@
                             <param id="0" name="Key">&quot;level&quot;</param>
                             <param id="1" name="Value">level</param>
                         </action>
-                        <action disabled="1" id="0" name="Set item" sid="886983422385004" type="LocalStorage">
-                            <param id="0" name="Key">&quot;tick&quot;</param>
-                            <param id="1" name="Value">tick</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="711785344238899">
@@ -728,18 +663,6 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="373656016979637" type="System">
                             <param id="0" name="Layout">SaveCheck</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" disabled="1" sid="336559256240158" title="win anim">
-            <sub-events>
-                <event-block disabled="1" sid="405043739508667">
-                    <conditions />
-                    <actions>
-                        <action behavior="Rotate" id="0" name="Set speed" sid="722728341108332" type="light">
-                            <param id="0" name="Speed">100</param>
                         </action>
                     </actions>
                 </event-block>

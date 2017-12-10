@@ -79,6 +79,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -112,6 +113,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -145,6 +147,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -178,6 +181,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -211,6 +215,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -244,6 +249,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -277,6 +283,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -310,6 +317,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -343,6 +351,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -376,6 +385,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -409,6 +419,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -442,6 +453,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -475,6 +487,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -508,6 +521,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -541,6 +555,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">

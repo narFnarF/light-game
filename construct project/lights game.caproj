@@ -94,6 +94,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="on" sid="266753302818456" type="boolean" />
+                <instance-variable name="dimmer" sid="154260591452367" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Rotate" sid="647058222299410">
