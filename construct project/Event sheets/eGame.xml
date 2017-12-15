@@ -461,6 +461,7 @@
         </event-group>
         <event-group description="" sid="431044059188775" title="HUD">
             <sub-events>
+                <variable constant="0" name="uiVisible" sid="730600919228489" static="1" type="text">false</variable>
                 <variable constant="0" name="dimmed" sid="494178472074750" static="1" type="number">0</variable>
                 <event-block sid="490218269702759">
                     <conditions>
@@ -477,29 +478,122 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="749381432803779">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="691336823788538" type="Mouse">
-                            <param id="0" name="Object">mouseDetector</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-18" name="Set layer opacity" sid="229273145716885" type="System">
-                            <param id="0" name="Layer">&quot;UI&quot;</param>
-                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 100, 0.1)</param>
-                        </action>
-                    </actions>
+                <event-block sid="166019812862665">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="123351594109814">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="179936540092990" type="System">
+                                    <param id="0" name="Variable">uiVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="229273145716885" type="System">
+                                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                                    <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 100, 0.1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="516739085948681">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="665609553356260" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="577106132130618" type="System">
+                                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                                    <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 0, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="496298708046513">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="496840485628753" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-18" name="Set layer opacity" sid="577106132130618" type="System">
-                            <param id="0" name="Layer">&quot;UI&quot;</param>
-                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 0, 0.2)</param>
-                        </action>
-                    </actions>
+                <event-block sid="878318146655810">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="749381432803779">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="691336823788538" type="Mouse">
+                                    <param id="0" name="Object">mouseDetector</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="654727612715176" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="623914451435373" type="System">
+                                    <param id="0" name="Variable">uiVisible</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="550012309978111">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="809072880889350" type="Mouse">
+                                    <param id="0" name="Object">mouseDetector</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="391327452835983" type="System">
+                                    <param id="0" name="Variable">uiVisible</param>
+                                    <param id="1" name="Value">&quot;false&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Check if mouse moved away too quickly to detect by the mouseDetector</comment>
+                        <event-block sid="279049681724530">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="lastPosition" sid="509458014963357" static="1" type="number">0</variable>
+                                <comment>si bougé</comment>
+                                <event-block sid="934333837828754">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="643826170858462" type="System">
+                                            <param id="0" name="Variable">lastPosition</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Mouse.AbsoluteX*1000 + Mouse.AbsoluteY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="506505132666722" type="System">
+                                            <param id="0" name="Variable">uiVisible</param>
+                                            <param id="1" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>si pas bougé</comment>
+                                <event-block sid="341277870343542">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="629873225430880" type="System">
+                                            <param id="0" name="Interval (seconds)">5</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="393253769602481" type="System">
+                                            <param id="0" name="Variable">lastPosition</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Mouse.AbsoluteX*1000 + Mouse.AbsoluteY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="696167126851331" type="System">
+                                            <param id="0" name="Variable">uiVisible</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359876171789885">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="917848295301801" type="System">
+                                            <param id="0" name="Variable">lastPosition</param>
+                                            <param id="1" name="Value">Mouse.AbsoluteX*1000 + Mouse.AbsoluteY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="852783046227213">
                     <conditions>
