@@ -177,9 +177,9 @@
                                 <event-block sid="990786432661881">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="460522692442663" type="System">
-                                            <param id="0" name="Variable">roll</param>
+                                            <param id="0" name="Variable">nbLights</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">rollMax</param>
+                                            <param id="2" name="Value">(level+1)^2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -687,11 +687,11 @@
                             <param id="1" name="Message">&quot;saving...&quot;</param>
                         </action>
                         <action id="0" name="Set item" sid="385057262824328" type="LocalStorage">
-                            <param id="0" name="Key">&quot;has savefile&quot;</param>
+                            <param id="0" name="Key">saveName &amp; &quot;has savefile&quot;</param>
                             <param id="1" name="Value">&quot;true&quot;</param>
                         </action>
                         <action id="0" name="Set item" sid="700825991456490" type="LocalStorage">
-                            <param id="0" name="Key">&quot;level&quot;</param>
+                            <param id="0" name="Key">saveName &amp; &quot;level&quot;</param>
                             <param id="1" name="Value">level</param>
                         </action>
                     </actions>
@@ -704,7 +704,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set item" sid="878588889209509" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;lights&quot;</param>
+                                    <param id="0" name="Key">saveName &amp; &quot;lights&quot;</param>
                                     <param id="1" name="Value">light.PickedCount</param>
                                 </action>
                             </actions>
@@ -715,7 +715,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set item" sid="813664811156507" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;lights&quot;</param>
+                                    <param id="0" name="Key">saveName &amp; &quot;lights&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>

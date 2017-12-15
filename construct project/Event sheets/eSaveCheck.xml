@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSaveCheck</name>
     <events>
+        <variable comment="prefix of local storage variable names" constant="0" name="saveName" sid="854790188373748" static="0" type="text">narF_lightgame_</variable>
         <event-block sid="533359218595878">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="563529625697962" type="System" />
@@ -16,7 +17,7 @@
                     <param id="1" name="Message">&quot;checking for savefile...&quot;</param>
                 </action>
                 <action id="5" name="Check item exists" sid="937975014233608" type="LocalStorage">
-                    <param id="0" name="Key">&quot;has savefile&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;has savefile&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -24,7 +25,7 @@
         <event-block sid="976655656947714">
             <conditions>
                 <condition id="9" name="On item exists" sid="179311770356772" type="LocalStorage">
-                    <param id="0" name="Key">&quot;has savefile&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;has savefile&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -33,10 +34,10 @@
                     <param id="1" name="Message">&quot;Savefile exists. Getting data...&quot;</param>
                 </action>
                 <action id="1" name="Get item" sid="246167249708517" type="LocalStorage">
-                    <param id="0" name="Key">&quot;level&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;level&quot;</param>
                 </action>
                 <action id="1" name="Get item" sid="326340505344541" type="LocalStorage">
-                    <param id="0" name="Key">&quot;lights&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;lights&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -44,7 +45,7 @@
         <event-block sid="894700823694868">
             <conditions>
                 <condition id="10" name="On item missing" sid="713006055298151" type="LocalStorage">
-                    <param id="0" name="Key">&quot;has savefile&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;has savefile&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -68,16 +69,19 @@
         <event-block sid="301947924091145">
             <conditions>
                 <condition id="1" name="On item get" sid="485452756720464" type="LocalStorage">
-                    <param id="0" name="Key">&quot;lights&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;lights&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="488861994106809">
                     <conditions>
-                        <condition id="12" name="Compare value" sid="897063942521160" type="LocalStorage">
+                        <condition disabled="1" id="12" name="Compare value" sid="897063942521160" type="LocalStorage">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Value">&quot;NaN&quot;</param>
+                        </condition>
+                        <condition id="-37" name="Is number NaN" sid="251085687304105" type="System">
+                            <param id="0" name="Number">LocalStorage.ItemValue</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -111,16 +115,19 @@
         <event-block sid="720340554728510">
             <conditions>
                 <condition id="1" name="On item get" sid="250944092933061" type="LocalStorage">
-                    <param id="0" name="Key">&quot;level&quot;</param>
+                    <param id="0" name="Key">saveName &amp; &quot;level&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="972210855251209">
                     <conditions>
-                        <condition id="12" name="Compare value" sid="417439525972178" type="LocalStorage">
+                        <condition disabled="1" id="12" name="Compare value" sid="417439525972178" type="LocalStorage">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Value">&quot;NaN&quot;</param>
+                        </condition>
+                        <condition id="-37" name="Is number NaN" sid="637756448884611" type="System">
+                            <param id="0" name="Number">LocalStorage.ItemValue</param>
                         </condition>
                     </conditions>
                     <actions>
