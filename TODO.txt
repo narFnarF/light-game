@@ -6,10 +6,8 @@ TODO
 
 
 Bugs:
-- local storage save files can be mixed with other game savefiles on itch.io. Need to add tag in front.
 - If i reload a save in win state, I can't click and cells don't animates
 - after cheat win, the next nb is always the same as before cheat
-- Mouse over, then leave quickly: text remain visible. Fix: check mouse position every 5 sec, hide text if mouse didn't move.
 
 
 
