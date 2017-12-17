@@ -728,7 +728,13 @@
                     </actions>
                 </event-block>
                 <event-block sid="402733090291289">
-                    <conditions />
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="817089087752198" type="System">
+                            <param id="0" name="Variable">effectsIntensity</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.00001</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="649355867120583" type="System">
                             <param id="0" name="Variable">effectsIntensity</param>
@@ -748,13 +754,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>TODO : GPU optimization</comment>
-                <event-block disabled="1" sid="661663892204108">
+                <comment>GPU optimization</comment>
+                <event-block sid="661663892204108">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="880801270165584" type="System">
                             <param id="0" name="Variable">effectsIntensity</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0.00001</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -762,6 +768,26 @@
                             <param id="0" name="Layer">&quot;game&quot;</param>
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="874081559349635" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;water disabled&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803125502450776">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="449864622849826" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-30" name="Set layer effect enabled" sid="932490293638637" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Water&quot;</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="401153204322969" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;water enabled&quot;</param>
                         </action>
                     </actions>
                 </event-block>
