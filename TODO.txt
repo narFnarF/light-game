@@ -6,6 +6,7 @@ TODO
 
 
 Bugs:
+- level 20+ don't display properly
 - If i reload a save in win state, I can't click and cells don't animates
 - after cheat win, the next nb is always the same as before cheat
 
