@@ -2,13 +2,13 @@
 <c2project>
     <name>lights game</name>
     <description></description>
-    <version>6</version>
+    <version>7</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://narF.ca</author-website>
     <app-id>ca.narF.lights</app-id>
     <unique-id>22sbj03s5zl2y</unique-id>
-    <saved-with-version>24400</saved-with-version>
+    <saved-with-version>25000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>

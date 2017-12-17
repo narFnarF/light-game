@@ -1,7 +1,5 @@
 TODO
 - Changement de couleurs par level
-- victory vfx: blur? others?
-- icône
 - Options: 1 min ou 5 min?
 
 

@@ -407,7 +407,7 @@
                         <event-block sid="521841855575820">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="380089761240922" type="Keyboard">
-                                    <param id="0" name="Key">32 (Espace)</param>
+                                    <param id="0" name="Key">32</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -424,7 +424,7 @@
                         <event-block sid="741483800449736">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="603591060294792" type="Keyboard">
-                                    <param id="0" name="Key">49 (1)</param>
+                                    <param id="0" name="Key">49</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -445,7 +445,7 @@
                         <event-block sid="616176838207756">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="811281542115936" type="Keyboard">
-                                    <param id="0" name="Key">53 (5)</param>
+                                    <param id="0" name="Key">53</param>
                                 </condition>
                             </conditions>
                             <actions>
