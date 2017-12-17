@@ -85,6 +85,15 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="724920452772427">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="394548837887271" type="Function">
+                                    <param id="0" name="Name">&quot;change colors&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -870,6 +879,163 @@
                             <param id="0" name="Layout">SaveCheck</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="958052969531282" title="couleurs qui changent">
+            <sub-events>
+                <variable constant="0" name="hue" sid="442149292479677" static="1" type="number">0</variable>
+                <variable constant="0" name="saturation" sid="536248255835100" static="1" type="number">0</variable>
+                <variable constant="0" name="luminosity" sid="142593499357789" static="1" type="number">0</variable>
+                <event-block sid="839016562725084">
+                    <conditions>
+                        <condition id="0" name="On function" sid="371761618079453" type="Function">
+                            <param id="0" name="Name">&quot;change colors&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="746387826391861">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="381449686139325" type="System">
+                                    <param id="0" name="First value">Date.Month</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="487697205212491" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;C&apos;est Noël&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="252167533698488">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="446535832862206" type="System">
+                                            <param id="0" name="First value">level%2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="790069617953496" type="System">
+                                            <param id="0" name="Variable">hue</param>
+                                            <param id="1" name="Value">40</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="484250898219078" type="System">
+                                            <param id="0" name="Variable">saturation</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="332291600678594" type="System">
+                                            <param id="0" name="Variable">luminosity</param>
+                                            <param id="1" name="Value">80</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="751694383856224" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;vert&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="380994952142519">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="543920685134314" type="System">
+                                            <param id="0" name="First value">level%2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="917675654429752" type="System">
+                                            <param id="0" name="Variable">hue</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="222622721215069" type="System">
+                                            <param id="0" name="Variable">saturation</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="793862308023402" type="System">
+                                            <param id="0" name="Variable">luminosity</param>
+                                            <param id="1" name="Value">80</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="886147299701676" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;rouge&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="929485088794821">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="798480254303549" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="700295426609075" type="System">
+                                    <param id="0" name="Variable">hue</param>
+                                    <param id="1" name="Value">(((level-1) *3) %100) -100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="734962051882720" type="System">
+                                    <param id="0" name="Variable">saturation</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="933468908191257" type="System">
+                                    <param id="0" name="Variable">luminosity</param>
+                                    <param id="1" name="Value">100+ (level-1)*0.5</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="595620620918308" type="System">
+                                    <param id="0" name="Variable">luminosity</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="717731802003470">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="-32" name="Set layer effect parameter" sid="386411722806913" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">0</param>
+                                    <param id="3" name="Value">hue</param>
+                                </action>
+                                <action disabled="1" id="-32" name="Set layer effect parameter" sid="263607942653797" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">saturation</param>
+                                </action>
+                                <action disabled="1" id="-32" name="Set layer effect parameter" sid="144378100323529" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">2</param>
+                                    <param id="3" name="Value">luminosity</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="522617004192627" type="light">
+                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">hue</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="471939191248183" type="light">
+                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">saturation</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="479049421186137" type="light">
+                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">luminosity</param>
+                                </action>
+                                <action id="14" name="Log" sid="392329664688046" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;adjusting colors: &quot; &amp; hue &amp; &quot;, &quot; &amp; saturation &amp; &quot;, &quot; &amp; luminosity</param>
+                                </action>
+                                <action id="14" name="Log" sid="855751738644518" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;nb lights picked: &quot; &amp; light.PickedCount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
