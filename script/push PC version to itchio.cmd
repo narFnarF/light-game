@@ -33,7 +33,7 @@ popd
 
 
 ::butler push all versions
-::%butler% push --userversion-file="versionNb-pc.txt" %dossier%\win32 narf/%projectNameItchIO%:windows32
+%butler% push --userversion-file="versionNb-pc.txt" %dossier%\win32 narf/%projectNameItchIO%:windows32
 
 %butler% push --userversion-file="versionNb-pc.txt" %dossier%\win64 narf/%projectNameItchIO%:windows64
 
