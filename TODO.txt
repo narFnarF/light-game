@@ -1,6 +1,7 @@
 TODO
 - press S to take screenshot
 - hold RSET to delete savefile and start over
+- display version on start screen
 - Options: 1 min ou 5 min?
 
 
