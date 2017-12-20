@@ -1,4 +1,5 @@
 TODO
+- increase the luminosity of christmas colors too
 - press S to take screenshot
 - hold RSET to delete savefile and start over
 - display version on start screen
