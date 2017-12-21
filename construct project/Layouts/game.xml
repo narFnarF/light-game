@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>250.5</x>
-                        <y>245</y>
+                        <x>249</x>
+                        <y>251</y>
                         <z>0</z>
-                        <width>384</width>
-                        <height>398</height>
+                        <width>358</width>
+                        <height>365</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -79,6 +79,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -88,6 +89,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -112,6 +122,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -121,6 +132,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -145,6 +165,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -154,6 +175,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -178,6 +208,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -187,6 +218,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -211,6 +251,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -220,6 +261,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -244,6 +294,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -253,6 +304,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -277,6 +337,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -286,6 +347,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -310,6 +380,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -319,6 +390,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -343,6 +423,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -352,6 +433,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -376,6 +466,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -385,6 +476,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -409,6 +509,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -418,6 +519,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -442,6 +552,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -451,6 +562,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -475,6 +595,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -484,6 +605,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -508,6 +638,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -517,6 +648,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -541,6 +681,7 @@
                     </properties>
                     <instance-variables>
                         <on>false</on>
+                        <dimmer>0</dimmer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
@@ -550,6 +691,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -592,6 +742,16 @@
                         </parameters>
                     </effect-instance>
                 </effect-type>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                    <effect-instance type="AdjustHSL">
+                        <parameters>
+                            <hue>0</hue>
+                            <luminosity>1</luminosity>
+                            <saturation>1</saturation>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
             </effects>
         </layer>
         <layer name="UI" sid="526784532880429">
@@ -625,10 +785,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>20</x>
+                        <x>-62</x>
                         <y>44</y>
                         <z>0</z>
-                        <width>463</width>
+                        <width>631</width>
                         <height>276</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -766,6 +926,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="Date" uid="26" />
+    </nonworld-instances>
     <effects />
 </c2layout>

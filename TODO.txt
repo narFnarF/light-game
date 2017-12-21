@@ -1,15 +1,13 @@
 TODO
-- prevent possible cheating: relaunching the game to enlight faster than 5 minutes
----- save the nb of lights, and relight them on launch
-- UI: cacher txtbox level & size au level 1
-- Effet quand l'écran est full
-- Changement de couleurs par level
-- icône
-- Options: 1 min ou 5 min
+- press S to take screenshot
+- hold RSET to delete savefile and start over
+- display version on start screen
+- Options: 1 min ou 5 min?
 
 
 Bugs:
-- Function "light n" tries to access out of bound parameter
+- If i reload a save in win state, I can't click and cells don't animates
+- after cheat win, the next nb is always the same as before cheat
 
 
 
@@ -17,12 +15,3 @@ release:
 - page itch.io
 - description & readme sur github
 - vaguely inspired by Vesper5 and pretty colors in general
-
-
-
-
-Idée d'animation de victoire:
-- Faire tourner les carrés pendant quelques secondes
-- Mettre des effets de blur et tout ça comme quand je misclick
-- etc...
-
