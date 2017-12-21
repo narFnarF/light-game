@@ -1,8 +1,10 @@
 TODO
+- increase the luminosity of christmas colors too
 - press S to take screenshot
 - hold RSET to delete savefile and start over
-- display version on start screen
+- display version on loading screen
 - Options: 1 min ou 5 min?
+- Options to resize the window (1x, 2x, 3x, etc...)
 
 
 Bugs:
