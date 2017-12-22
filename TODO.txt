@@ -10,7 +10,7 @@ TODO
 Bugs:
 - If i reload a save in win state, I can't click and cells don't animates
 - after cheat win, the next nb is always the same as before cheat
-
+- Uses a lot of CPU at level 10+
 
 
 release:
