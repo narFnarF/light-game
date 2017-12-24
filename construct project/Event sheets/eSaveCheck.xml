@@ -183,5 +183,16 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Display version number</comment>
+        <event-block sid="475597046385930">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="970269882959576" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="617017561147198" type="tLevel">
+                    <param id="0" name="Text">&quot;v&quot; &amp; projectversion</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
