@@ -1,5 +1,4 @@
 TODO
-- increase the luminosity of christmas colors too
 - Options: 1 min ou 5 min?
 - Options to resize the window (1x, 2x, 3x, etc...)
 
