@@ -450,7 +450,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="616176838207756">
+                        <event-block disabled="1" sid="616176838207756">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="811281542115936" type="Keyboard">
                                     <param id="0" name="Key">53</param>
@@ -876,6 +876,33 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="373656016979637" type="System">
                             <param id="0" name="Layout">SaveCheck</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>hold Shift+DL to delete savefile</comment>
+                <event-block sid="398592249956294">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="555888472193796" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="140785222133483" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition disabled="1" id="2" name="Key is down" sid="993411715322278" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="628104010069372" type="Keyboard">
+                            <param id="0" name="Key">76</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="716378592479573" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;reset&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="537962067333380" type="Function">
+                            <param id="0" name="Name">&quot;delete save&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
