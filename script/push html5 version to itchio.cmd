@@ -4,9 +4,9 @@ echo Push html5 build to itch.io
 title Push html5 build to itch.io
 
 ::PARAMETERS TO SET
-set dossier="C:\Users\narF\Desktop\lights game html5"
+set dossier="C:\Users\narF\Desktop\light game html5"
 set butler="%appdata%\itch\bin\butler.exe"
-set projectNameItchIO="lights-game"
+set projectNameItchIO="light-game"
 
 
 

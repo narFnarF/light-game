@@ -4,10 +4,10 @@ echo Push PC build to itch.io
 title Push PC build to itch.io
 
 ::PARAMETERS TO SET
-set dossier="C:\Users\narF\Desktop\lights game"
+set dossier="C:\Users\narF\Desktop\light game"
 set butler="%appdata%\itch\bin\butler.exe"
 set exeName="lights game"
-set projectNameItchIO="lights-game"
+set projectNameItchIO="light-game"
 
 
 ::rename nw.exe to lights game.exe
