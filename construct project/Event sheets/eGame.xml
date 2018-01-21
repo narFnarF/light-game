@@ -315,7 +315,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>this could be optimized to avoid checking all lights after 2-3 sec, until necessary again</comment>
+                        <comment>TODO: this could be optimized to avoid checking all lights after 2-3 sec, until necessary again</comment>
                         <event-block sid="461752074170870">
                             <conditions>
                                 <condition id="-22" name="Else" sid="882292489772537" type="System" />
@@ -976,9 +976,6 @@
                         <condition id="0" name="On function" sid="371761618079453" type="Function">
                             <param id="0" name="Name">&quot;change colors&quot;</param>
                         </condition>
-                        <condition disabled="1" id="-14" name="Pick by unique ID" sid="420211160960253" type="light">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action disabled="1" id="14" name="Log" sid="328844742956181" type="Browser">
@@ -1023,10 +1020,6 @@
                                             <param id="0" name="Variable">saturation</param>
                                             <param id="1" name="Value">100</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="332291600678594" type="System">
-                                            <param id="0" name="Variable">luminosity</param>
-                                            <param id="1" name="Value">70</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="738869207772132" type="System">
                                             <param id="0" name="Variable">luminosity</param>
                                             <param id="1" name="Value">70+ (level-1)*1.4</param>
@@ -1053,10 +1046,6 @@
                                         <action id="-9" name="Set value" sid="222622721215069" type="System">
                                             <param id="0" name="Variable">saturation</param>
                                             <param id="1" name="Value">100</param>
-                                        </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="793862308023402" type="System">
-                                            <param id="0" name="Variable">luminosity</param>
-                                            <param id="1" name="Value">90</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="593699281257334" type="System">
                                             <param id="0" name="Variable">luminosity</param>
@@ -1085,10 +1074,6 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="734962051882720" type="System">
                                     <param id="0" name="Variable">saturation</param>
-                                    <param id="1" name="Value">100</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="595620620918308" type="System">
-                                    <param id="0" name="Variable">luminosity</param>
                                     <param id="1" name="Value">100</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="933468908191257" type="System">
@@ -1122,10 +1107,6 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;adjusting colors: &quot; &amp; hue &amp; &quot;, &quot; &amp; saturation &amp; &quot;, &quot; &amp; luminosity</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="855751738644518" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;nb lights picked: &quot; &amp; light.PickedCount</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1154,7 +1135,7 @@
                     <actions>
                         <action id="13" name="Invoke download" sid="164494049807256" type="Browser">
                             <param id="0" name="URL">CanvasSnapshot</param>
-                            <param id="1" name="Filename">&quot;light game snapshot&quot;</param>
+                            <param id="1" name="Filename">&quot;light game snapshot &quot; &amp; Date.Year &amp; &quot;-&quot; &amp; Date.Month &amp; &quot;-&quot; &amp; Date.Date &amp; &quot; &quot; &amp; Date.Hours &amp; &quot;_&quot; &amp; Date.Minutes &amp; &quot;_&quot; &amp; Date.Seconds</param>
                         </action>
                     </actions>
                 </event-block>
