@@ -137,7 +137,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="257990888311496" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="257990888311496" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;enlight!&quot;</param>
                         </action>
@@ -228,7 +228,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="565235981338103" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="565235981338103" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;function call: light n&quot;</param>
                         </action>
@@ -1093,7 +1093,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="933468908191257" type="System">
                                     <param id="0" name="Variable">luminosity</param>
-                                    <param id="1" name="Value">100+ (level-1)*0.5</param>
+                                    <param id="1" name="Value">100+ (level-1) * 1.4</param>
                                 </action>
                             </actions>
                         </event-block>
