@@ -4,8 +4,8 @@
     <sid>894611443876630</sid>
     <event-sheet>eSaveCheck</event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>500</width>
+        <height>500</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -60,6 +60,33 @@
                         <z>0</z>
                         <width>362</width>
                         <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tLevel" uid="27">
+                    <properties>
+                        <text>v8</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Barlow Condensed,-16,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>63</x>
+                        <y>450</y>
+                        <z>0</z>
+                        <width>354</width>
+                        <height>47</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

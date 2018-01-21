@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>lights game</name>
+    <name>light game</name>
     <description></description>
-    <version>8</version>
+    <version>10</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://narF.ca</author-website>
@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -75,6 +76,9 @@
             <object-type global="1" name="Date" sid="312484704802151">
                 <plugin id="Rex_Date" />
             </object-type>
+            <object-type name="NWjs" sid="746192085008521">
+                <plugin id="NodeWebkit" />
+            </object-type>
         </object-folder>
         <object-folder name="HUD">
             <object-type name="tLevel" sid="759820171986187">
@@ -106,11 +110,6 @@
                     <behavior id="Rotate" />
                 </behavior-type>
             </behaviors>
-            <effects>
-                <effect-type name="AdjustHSL">
-                    <effect id="hsladjust" />
-                </effect-type>
-            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677372214340652" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -150,6 +149,7 @@
         <global-instance type="Mouse" uid="3" />
         <global-instance type="Function" uid="4" />
         <global-instance type="LocalStorage" uid="24" />
+        <global-instance type="NWjs" uid="28" />
     </global-instances>
     <sounds-folder />
     <music-folder />

@@ -1,19 +1,19 @@
 TODO
-- increase the luminosity of christmas colors too
-- press S to take screenshot
-- hold RSET to delete savefile and start over
-- display version on loading screen
 - Options: 1 min ou 5 min?
-- Options to resize the window (1x, 2x, 3x, etc...)
-
 
 Bugs:
-- If i reload a save in win state, I can't click and cells don't animates
 - after cheat win, the next nb is always the same as before cheat
 
 
-
 release:
-- page itch.io
 - description & readme sur github
-- vaguely inspired by Vesper5 and pretty colors in general
+- new screenshots
+- annoncer sur forum New Releases de itch.io
+- post fb/twitter
+
+
+DONE/NEW:
+- utilise pas mal de CPU passé level 10
+- Game ends at level 29
+- Options to resize the window (1x, 2x, 3x, etc...)
+- Bug: If i reload a save in win state, I can't click and cells don't animates
