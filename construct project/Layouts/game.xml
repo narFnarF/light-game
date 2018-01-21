@@ -582,6 +582,16 @@
                 </instance>
             </instances>
             <effects>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                    <effect-instance type="AdjustHSL">
+                        <parameters>
+                            <hue>0</hue>
+                            <luminosity>1</luminosity>
+                            <saturation>1</saturation>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
                 <effect-type name="Water">
                     <effect id="water" />
                     <effect-instance type="Water">
@@ -604,16 +614,6 @@
                         <parameters>
                             <intensity>4</intensity>
                             <radius>0.4</radius>
-                        </parameters>
-                    </effect-instance>
-                </effect-type>
-                <effect-type name="AdjustHSL">
-                    <effect id="hsladjust" />
-                    <effect-instance type="AdjustHSL">
-                        <parameters>
-                            <hue>0</hue>
-                            <luminosity>1</luminosity>
-                            <saturation>1</saturation>
                         </parameters>
                     </effect-instance>
                 </effect-type>
