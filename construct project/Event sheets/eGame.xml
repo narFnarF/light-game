@@ -409,6 +409,83 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="950583573564162" title="screenshot">
+                    <sub-events>
+                        <event-block sid="456839249689286">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="257357093849100" type="Keyboard">
+                                    <param id="0" name="Key">83</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Snapshot canvas" sid="611134012398338" type="System">
+                                    <param id="0" name="Format">0</param>
+                                    <param id="1" name="JPEG quality">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="886737896096347">
+                            <conditions>
+                                <condition id="-26" name="On canvas snapshot" sid="815919344209193" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="13" name="Invoke download" sid="164494049807256" type="Browser">
+                                    <param id="0" name="URL">CanvasSnapshot</param>
+                                    <param id="1" name="Filename">&quot;light game snapshot &quot; &amp; Date.Year &amp; &quot;-&quot; &amp; Date.Month &amp; &quot;-&quot; &amp; Date.Date &amp; &quot; &quot; &amp; Date.Hours &amp; &quot;_&quot; &amp; Date.Minutes &amp; &quot;_&quot; &amp; Date.Seconds</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="866820068318699" title="resize window">
+                    <sub-events>
+                        <event-block sid="909404580077782">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="657943966513174" type="Keyboard">
+                                    <param id="0" name="Key">49</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="15" name="Set height" sid="389913283335249" type="NWjs">
+                                    <param id="0" name="Height">250</param>
+                                </action>
+                                <action id="14" name="Set width" sid="159809822697211" type="NWjs">
+                                    <param id="0" name="Width">250</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="729695658671174">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="801963383069178" type="Keyboard">
+                                    <param id="0" name="Key">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="15" name="Set height" sid="680126518776646" type="NWjs">
+                                    <param id="0" name="Height">500</param>
+                                </action>
+                                <action id="14" name="Set width" sid="240587682332404" type="NWjs">
+                                    <param id="0" name="Width">500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="367033889706868">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="873432306466158" type="Keyboard">
+                                    <param id="0" name="Key">51</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="15" name="Set height" sid="639749139828596" type="NWjs">
+                                    <param id="0" name="Height">900</param>
+                                </action>
+                                <action id="14" name="Set width" sid="790441832393471" type="NWjs">
+                                    <param id="0" name="Width">900</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="554837381260762" title="cheat">
@@ -426,10 +503,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-13" name="Set boolean" sid="220224086886326" type="light">
-                                    <param id="0" name="Instance variable">on</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="433836196348385" type="System">
                                     <param id="0" name="Variable">winState</param>
                                     <param id="1" name="Value">&quot;true&quot;</param>
@@ -439,7 +512,7 @@
                         <event-block sid="741483800449736">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="603591060294792" type="Keyboard">
-                                    <param id="0" name="Key">49</param>
+                                    <param id="0" name="Key">81</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -453,19 +526,6 @@
                                 </action>
                                 <action id="0" name="Call function" sid="396223880999676" type="Function">
                                     <param id="0" name="Name">&quot;save&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="616176838207756">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="811281542115936" type="Keyboard">
-                                    <param id="0" name="Key">53</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="154403793195589" type="Function">
-                                    <param id="0" name="Name">&quot;delete save&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -1110,34 +1170,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="950583573564162" title="screenshot">
-            <sub-events>
-                <event-block sid="456839249689286">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="257357093849100" type="Keyboard">
-                            <param id="0" name="Key">83</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-27" name="Snapshot canvas" sid="611134012398338" type="System">
-                            <param id="0" name="Format">0</param>
-                            <param id="1" name="JPEG quality">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="886737896096347">
-                    <conditions>
-                        <condition id="-26" name="On canvas snapshot" sid="815919344209193" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="13" name="Invoke download" sid="164494049807256" type="Browser">
-                            <param id="0" name="URL">CanvasSnapshot</param>
-                            <param id="1" name="Filename">&quot;light game snapshot &quot; &amp; Date.Year &amp; &quot;-&quot; &amp; Date.Month &amp; &quot;-&quot; &amp; Date.Date &amp; &quot; &quot; &amp; Date.Hours &amp; &quot;_&quot; &amp; Date.Minutes &amp; &quot;_&quot; &amp; Date.Seconds</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

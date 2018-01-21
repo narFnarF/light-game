@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -74,6 +75,9 @@
             </object-type>
             <object-type global="1" name="Date" sid="312484704802151">
                 <plugin id="Rex_Date" />
+            </object-type>
+            <object-type name="NWjs" sid="746192085008521">
+                <plugin id="NodeWebkit" />
             </object-type>
         </object-folder>
         <object-folder name="HUD">
@@ -145,6 +149,7 @@
         <global-instance type="Mouse" uid="3" />
         <global-instance type="Function" uid="4" />
         <global-instance type="LocalStorage" uid="24" />
+        <global-instance type="NWjs" uid="28" />
     </global-instances>
     <sounds-folder />
     <music-folder />
