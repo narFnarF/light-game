@@ -503,6 +503,15 @@
                                     <param id="0" name="Layer">&quot;UI&quot;</param>
                                     <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 100, 0.1)</param>
                                 </action>
+                                <action id="-30" name="Set layer effect enabled" sid="562967569590386" type="System">
+                                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                                    <param id="1" name="Mode">1</param>
+                                    <param id="2" name="Effect">&quot;Pulse&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="139560648349292" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;UI vfx: enabled&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="516739085948681">
@@ -515,6 +524,28 @@
                                     <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 0, 0.2)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="156097063064854">
+                                    <conditions>
+                                        <condition id="-17" name="Compare opacity" sid="873442167712977" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Opacity">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="861670680741183" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;UI vfx: disabled&quot;</param>
+                                        </action>
+                                        <action id="-30" name="Set layer effect enabled" sid="970351596177428" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Mode">0</param>
+                                            <param id="2" name="Effect">&quot;Pulse&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -777,9 +808,19 @@
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="874081559349635" type="Browser">
+                        <action id="-30" name="Set layer effect enabled" sid="925117013766264" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="409255002086482" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="874081559349635" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;water disabled&quot;</param>
+                            <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: disabled&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -793,9 +834,19 @@
                             <param id="1" name="Mode">1</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="401153204322969" type="Browser">
+                        <action id="-30" name="Set layer effect enabled" sid="371198932324901" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="831715901287726" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="401153204322969" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;water enabled&quot;</param>
+                            <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: enabled&quot;</param>
                         </action>
                     </actions>
                 </event-block>
