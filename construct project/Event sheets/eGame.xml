@@ -185,10 +185,15 @@
                             <sub-events>
                                 <event-block sid="990786432661881">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="460522692442663" type="System">
+                                        <condition disabled="1" id="-14" name="Compare variable" sid="460522692442663" type="System">
                                             <param id="0" name="Variable">nbLights</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">(level+1)^2</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="121459600926988" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;has won&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;true&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -218,6 +223,112 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="853035232319766">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="702954761484953" type="System" />
+                        <condition id="-8" name="Compare two values" sid="605498935489079" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;has won&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="663018359248635" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;1 &quot; &amp; Function.Call(&quot;has won&quot;, 1)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="868747474986439" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;3 &quot; &amp; Function.Call(&quot;has won&quot;, 3)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="471996588084423" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;4 &quot; &amp; Function.Call(&quot;has won&quot;, 4)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="251011994686433" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;9 &quot; &amp; Function.Call(&quot;has won&quot;, 9)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="441569750744653" type="System">
+                            <param id="0" name="Variable">winState</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="429084115795183">
+                    <conditions>
+                        <condition id="0" name="On function" sid="275270093529661" type="Function">
+                            <param id="0" name="Name">&quot;has won&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="379945932628718" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function: has won?&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="n" sid="268263257155258" static="0" type="number">0</variable>
+                        <event-block sid="452155956749623">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="801377690010241" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="225493463312787" type="System">
+                                    <param id="0" name="Variable">n</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="270652860684174">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="858530381940543" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="846309396454750" type="System">
+                                    <param id="0" name="Variable">n</param>
+                                    <param id="1" name="Value">nbLights</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="500542760732277">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="180347183624624" type="System">
+                                    <param id="0" name="First value">n</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">(level+1)^2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="637729034923474" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="485282337776202" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;has won? &quot; &amp; n &amp; &quot;: true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="202988890689386">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="924675268328590" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="584626804631124" type="Function">
+                                    <param id="0" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="704754950681419" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;has won? &quot; &amp; n &amp; &quot;: false&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
