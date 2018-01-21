@@ -1,11 +1,11 @@
 TODO
 - Options: 1 min ou 5 min?
 - Options to resize the window (1x, 2x, 3x, etc...)
-- add date in screenshot name
 
 Bugs:
 - If i reload a save in win state, I can't click and cells don't animates
 - after cheat win, the next nb is always the same as before cheat
+- utilise pas mal de CPU dans le bloc d'events Lights, passé level 10
 
 
 release:
