@@ -508,7 +508,7 @@
                                     <param id="1" name="Mode">1</param>
                                     <param id="2" name="Effect">&quot;Pulse&quot;</param>
                                 </action>
-                                <action id="14" name="Log" sid="139560648349292" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="139560648349292" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;UI vfx: enabled&quot;</param>
                                 </action>
@@ -534,7 +534,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="861670680741183" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="861670680741183" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;UI vfx: disabled&quot;</param>
                                         </action>
@@ -818,7 +818,7 @@
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
                         </action>
-                        <action id="14" name="Log" sid="874081559349635" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="874081559349635" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: disabled&quot;</param>
                         </action>
@@ -844,7 +844,7 @@
                             <param id="1" name="Mode">1</param>
                             <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
                         </action>
-                        <action id="14" name="Log" sid="401153204322969" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="401153204322969" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: enabled&quot;</param>
                         </action>
@@ -1068,7 +1068,7 @@
                                 <condition id="-22" name="Else" sid="798480254303549" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="253765490067049" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="253765490067049" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;C&apos;est pas Noël&quot;</param>
                                 </action>
@@ -1093,26 +1093,29 @@
                         <event-block sid="717731802003470">
                             <conditions />
                             <actions>
-                                <action id="-28" name="Set effect parameter" sid="522617004192627" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">hue</param>
+                                <action id="-32" name="Set layer effect parameter" sid="699755616405912" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">0</param>
+                                    <param id="3" name="Value">hue</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="471939191248183" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">saturation</param>
+                                <action id="-32" name="Set layer effect parameter" sid="637185429314227" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">saturation</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="479049421186137" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">luminosity</param>
+                                <action id="-32" name="Set layer effect parameter" sid="379754616699665" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">2</param>
+                                    <param id="3" name="Value">luminosity</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="392329664688046" type="Browser">
+                                <action id="14" name="Log" sid="392329664688046" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;adjusting colors: &quot; &amp; hue &amp; &quot;, &quot; &amp; saturation &amp; &quot;, &quot; &amp; luminosity</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="855751738644518" type="Browser">
+                                <action id="14" name="Log" sid="855751738644518" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;nb lights picked: &quot; &amp; light.PickedCount</param>
                                 </action>
