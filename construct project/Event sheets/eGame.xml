@@ -81,17 +81,18 @@
                                         <action id="-16" name="Set opacity" sid="153673772313058" type="light">
                                             <param id="0" name="Opacity">0</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="394548837887271" type="Function">
-                                            <param id="0" name="Name">&quot;change colors&quot;</param>
-                                            <param id="1" name="Parameter {n}">light.UID</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="724920452772427">
                             <conditions />
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="394548837887271" type="Function">
+                                    <param id="0" name="Name">&quot;change colors&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -136,7 +137,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="257990888311496" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="257990888311496" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;enlight!&quot;</param>
                         </action>
@@ -152,7 +153,7 @@
                                     <param id="0" name="Variable">rollMax</param>
                                     <param id="1" name="Value">level * 60 /5</param>
                                 </action>
-                                <action id="14" name="Log" sid="336715454971486" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="336715454971486" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;rollMax: &quot; &amp; rollMax</param>
                                 </action>
@@ -160,7 +161,7 @@
                                     <param id="0" name="Variable">roll</param>
                                     <param id="1" name="Value">ceil(random(0.000001, rollMax))</param>
                                 </action>
-                                <action id="14" name="Log" sid="406384620158779" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="406384620158779" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;roll: &quot; &amp; roll</param>
                                 </action>
@@ -168,7 +169,7 @@
                                     <param id="0" name="Variable">lights</param>
                                     <param id="1" name="Value">ceil( roll/rollMax * light.PickedCount )</param>
                                 </action>
-                                <action id="14" name="Log" sid="630717905509738" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="630717905509738" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;lights: &quot; &amp; lights</param>
                                 </action>
@@ -195,7 +196,7 @@
                                             <param id="0" name="Variable">winState</param>
                                             <param id="1" name="Value">&quot;true&quot;</param>
                                         </action>
-                                        <action id="14" name="Log" sid="693007813880461" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="693007813880461" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;win: true&quot;</param>
                                         </action>
@@ -210,7 +211,7 @@
                                             <param id="0" name="Variable">winState</param>
                                             <param id="1" name="Value">&quot;false&quot;</param>
                                         </action>
-                                        <action id="14" name="Log" sid="265678023499271" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="265678023499271" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;win: false&quot;</param>
                                         </action>
@@ -226,7 +227,12 @@
                             <param id="0" name="Name">&quot;light n&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="565235981338103" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function call: light n&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <variable constant="0" name="n" sid="700636243393481" static="0" type="number">0</variable>
                         <event-block sid="494315483192934">
@@ -309,6 +315,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>this could be optimized to avoid checking all lights after 2-3 sec, until necessary again</comment>
                         <event-block sid="461752074170870">
                             <conditions>
                                 <condition id="-22" name="Else" sid="882292489772537" type="System" />
@@ -503,6 +510,15 @@
                                     <param id="0" name="Layer">&quot;UI&quot;</param>
                                     <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 100, 0.1)</param>
                                 </action>
+                                <action id="-30" name="Set layer effect enabled" sid="562967569590386" type="System">
+                                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                                    <param id="1" name="Mode">1</param>
+                                    <param id="2" name="Effect">&quot;Pulse&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="139560648349292" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;UI vfx: enabled&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="516739085948681">
@@ -515,6 +531,28 @@
                                     <param id="1" name="Opacity">lerp(LayerOpacity(&quot;UI&quot;), 0, 0.2)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="156097063064854">
+                                    <conditions>
+                                        <condition id="-17" name="Compare opacity" sid="873442167712977" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Opacity">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="14" name="Log" sid="861670680741183" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;UI vfx: disabled&quot;</param>
+                                        </action>
+                                        <action id="-30" name="Set layer effect enabled" sid="970351596177428" type="System">
+                                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                                            <param id="1" name="Mode">0</param>
+                                            <param id="2" name="Effect">&quot;Pulse&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -777,9 +815,19 @@
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
                         </action>
+                        <action id="-30" name="Set layer effect enabled" sid="925117013766264" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                        </action>
+                        <action disabled="1" id="-30" name="Set layer effect enabled" sid="409255002086482" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
+                        </action>
                         <action disabled="1" id="14" name="Log" sid="874081559349635" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;water disabled&quot;</param>
+                            <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: disabled&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -793,9 +841,19 @@
                             <param id="1" name="Mode">1</param>
                             <param id="2" name="Effect">&quot;Water&quot;</param>
                         </action>
+                        <action id="-30" name="Set layer effect enabled" sid="371198932324901" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                        </action>
+                        <action disabled="1" id="-30" name="Set layer effect enabled" sid="831715901287726" type="System">
+                            <param id="0" name="Layer">&quot;game&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;AdjustHSL&quot;</param>
+                        </action>
                         <action disabled="1" id="14" name="Log" sid="401153204322969" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;water enabled&quot;</param>
+                            <param id="1" name="Message">&quot;effects on &apos;game&apos; layer: enabled&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -918,7 +976,7 @@
                         <condition id="0" name="On function" sid="371761618079453" type="Function">
                             <param id="0" name="Name">&quot;change colors&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="420211160960253" type="light">
+                        <condition disabled="1" id="-14" name="Pick by unique ID" sid="420211160960253" type="light">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
@@ -1017,7 +1075,7 @@
                                 <condition id="-22" name="Else" sid="798480254303549" type="System" />
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="253765490067049" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="253765490067049" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;C&apos;est pas Noël&quot;</param>
                                 </action>
@@ -1035,29 +1093,32 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="933468908191257" type="System">
                                     <param id="0" name="Variable">luminosity</param>
-                                    <param id="1" name="Value">100+ (level-1)*0.5</param>
+                                    <param id="1" name="Value">100+ (level-1) * 1.4</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="717731802003470">
                             <conditions />
                             <actions>
-                                <action id="-28" name="Set effect parameter" sid="522617004192627" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">hue</param>
+                                <action id="-32" name="Set layer effect parameter" sid="699755616405912" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">0</param>
+                                    <param id="3" name="Value">hue</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="471939191248183" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">saturation</param>
+                                <action id="-32" name="Set layer effect parameter" sid="637185429314227" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">saturation</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="479049421186137" type="light">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">luminosity</param>
+                                <action id="-32" name="Set layer effect parameter" sid="379754616699665" type="System">
+                                    <param id="0" name="Layer">&quot;game&quot;</param>
+                                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="2" name="Parameter index">2</param>
+                                    <param id="3" name="Value">luminosity</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="392329664688046" type="Browser">
+                                <action id="14" name="Log" sid="392329664688046" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;adjusting colors: &quot; &amp; hue &amp; &quot;, &quot; &amp; saturation &amp; &quot;, &quot; &amp; luminosity</param>
                                 </action>

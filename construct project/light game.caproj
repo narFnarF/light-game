@@ -106,11 +106,6 @@
                     <behavior id="Rotate" />
                 </behavior-type>
             </behaviors>
-            <effects>
-                <effect-type name="AdjustHSL">
-                    <effect id="hsladjust" />
-                </effect-type>
-            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677372214340652" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
