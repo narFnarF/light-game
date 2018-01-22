@@ -1,4 +1,6 @@
 TODO
+- Resize with mouse keeps ratio (either during resize or after mouse-release)
+- Options in UI?
 - Options: 1 min ou 5 min?
 
 Bugs:
@@ -6,14 +8,8 @@ Bugs:
 
 
 release:
-- description & readme sur github
-- new screenshots
 - annoncer sur forum New Releases de itch.io
 - post fb/twitter
 
 
 DONE/NEW:
-- utilise pas mal de CPU passé level 10
-- Game ends at level 29
-- Options to resize the window (1x, 2x, 3x, etc...)
-- Bug: If i reload a save in win state, I can't click and cells don't animates
