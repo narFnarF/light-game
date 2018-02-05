@@ -1,5 +1,6 @@
 TODO
 - Change color (hue) more per level, now that the game stops at level 29
+- Maybe level 29 is too hard?
 - Resize with mouse keeps ratio (either during resize or after mouse-release)
 - Options in UI?
 - Options: 1 min ou 5 min?
