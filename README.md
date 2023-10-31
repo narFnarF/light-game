@@ -1,6 +1,8 @@
 # lights-game
 A small game rewarding patience.
 
+# The repo as migrated to https://codeberg.org/narF/light-game
+
 ## Play
 Play it for free on itch.io here: https://narf.itch.io/light-game
 
